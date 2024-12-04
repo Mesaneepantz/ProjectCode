@@ -1,0 +1,138 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    background-color: #ffcc00; /* สีพื้นหลัง */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0000;
+}
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffaa22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-home:hover {
+    background-color: #cc8400;
+    transition: 0.3s;
+}
+.btn-github {
+    display: inline-block;
+    background-color: #f99898;
+    color: white;
+    text-decoration: none;
+    text-align: right;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-github:hover {
+    background-color: #8d1207;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  h2 {
+    text-align: center;
+    color: #f99898;
+    font-size: 48px;
+    margin-bottom: 100px;
+  }
+  h3 {
+    text-align: center;
+    color: #000000;
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  #internshipobjective {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #8d1207;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: right;
+  }
+  .internship-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 120px;
+  }
+  .internship {
+    width: 60%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .internship:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  .internship p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
+  #experience1 {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #8d1207;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .experience-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 120px;
+  }
+  
+  .experience {
+    width: 60%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .experience:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  .experience p {
+    font-size: 18px;
+    color: #333;
+    margin-top: 10px;
+  }
