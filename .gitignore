@@ -1,0 +1,16 @@
+# Ignore node_modules directory
+node_modules/
+
+# Ignore .env file (เก็บข้อมูลที่เป็นความลับ)
+.env
+
+# Ignore log files
+*.log
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore resume files (ถ้าคุณไม่ต้องการให้ไฟล์เหล่านี้ถูกติดตาม)
+My\ resume(Web)/My\ RESUME.docx
+My\ resume(Web)/My\ RESUME.pdf
