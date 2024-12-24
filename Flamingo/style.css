@@ -208,7 +208,7 @@ header p {
 
 /* Social Links Section */
 .social-links {
-    background-color: #fce0e5;
+    background-color: #ffffff;
     text-align: center;
     margin-top: 50px;
     padding: 30px 0;
@@ -396,5 +396,25 @@ section.py-5 {
     .card {
         margin-bottom: 20px;
  
+    }
+}
+/* สำหรับหน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
+@media (max-width: 576px) {
+    header img {
+        width: 100px;
+    }
+}
+
+/* สำหรับแท็บเล็ต */
+@media (min-width: 577px) and (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+}
+
+/* สำหรับหน้าจอขนาดใหญ่ (โน๊ตบุ๊คและคอมพิวเตอร์) */
+@media (min-width: 769px) {
+    .container {
+        max-width: 1200px;
     }
 }
