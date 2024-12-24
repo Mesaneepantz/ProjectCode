@@ -1,6 +1,6 @@
 /* Global Styles */
 body {
-    font-family: 'Arial','Mali';
+    font-family: 'Arial', 'Mali', sans-serif;
     background-color: #fce0e5;
     margin: 0;
     padding: 0;
@@ -8,54 +8,61 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 120px;
     margin: 0 auto;
     padding: 15px;
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Arial', sans-serif; /* ใช้ฟอนต์ Mali สำหรับหัวข้อ */
-    color: #d16c91; /* สีชมพู */
+    font-family: 'Mali', sans-serif;
+    color: #d16c91;
     font-weight: 700;
-    padding: 20px; /* ระยะห่างภายใน */
-}
-.img-small {
-    width: 30px;
-    height: 30px;
-    object-fit: cover; /* เพื่อให้รูปปรับขนาดโดยไม่บิดเบี้ยว */
+    padding: 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Navbar */
 .navbar {
-    border-radius: 25px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     background-color: #ffb9d2;
+    border-radius: 25px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 2px solid #FFC0CB; /* กรอบสีชมพูอ่อน */
+    border: 2px solid #FFC0CB;
+    padding: 10px 20px;
 }
 
 .navbar-brand {
-    color: #d16c91;
+    margin-right: 20px;
+}
+
+.navbar-logo {
+    width: 80px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-name {
+    color: rgb(248, 0, 153);
+    font-size: 1.5rem;
     font-weight: bold;
-}
-
-.navbar-nav .nav-link {
-    color: rgb(0, 0, 0);
-    font-size: 16px;
-}
-
-.navbar-nav .nav-link:hover {
-    color: #d16c91;
+    margin-left: 10px;
 }
 
 /* Header */
 header {
-    text-align: center;
+    background-color: #fce0e5; 
+    background-image: url('path/to/your/background-image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     padding: 50px 0;
-    background-color: #FF007F;
+    text-align: center;
+
     border-radius: 25px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #FFC0CB; /* กรอบสีชมพูอ่อน */
-    margin-top: 50px; /* ระยะห่างจาก navbar */
+    margin-top: 50px;
 }
 
 header h1 {
@@ -68,95 +75,119 @@ header p {
     color: #d16c91;
 }
 
-button.cta-btn {
-    background-color: #d16c91;
+.btn.btn-primary {
+    background-color: #ff007f;
     color: white;
-    border: none;
-    padding: 10px 25px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
     transition: background-color 0.3s;
 }
 
-button.cta-btn:hover {
-    background-color: #fce0e5;
+.btn.btn-primary:hover {
+    background-color: #ff69b4;
 }
 
 /* Features Section */
 .feature-box {
-    border: 2px solid transparent; /* กรอบโปร่งใสเริ่มต้น */
-    transition: all 0.3s ease; /* การเปลี่ยนแปลงที่ลื่นไหลเมื่อ hover */
+    background: linear-gradient(135deg, #FFAFCC, #ffc8dd);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
 .feature-box:hover {
-    border-color: #ff69b4; /* กรอบสีชมพูเมื่อ hover */
-    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3); /* เพิ่มเงาสีชมพู */
-    transform: scale(1.05); /* ขยายขนาดเล็กน้อยเมื่อ hover */
+    border-color: #ff69b4;
+    box-shadow: 0 4px 8px rgba(255, 105, 180, 0.3);
+    transform: scale(1.05);
 }
 
 .feature-box i {
     font-size: 3rem;
-    color: #ff69b4; /* ไอคอนสีชมพู */
+    color: #ff69b4;
     margin-bottom: 20px;
-    transition: color 0.3s ease; /* เปลี่ยนสีของไอคอนเมื่อ hover */
+    transition: color 0.3s ease;
 }
 
 .feature-box:hover i {
-    color: white; /* เปลี่ยนสีไอคอนเป็นขาวเมื่อ hover */
+    color: white;
 }
 
 .feature-box h3 {
-    color: #333; /* สีข้อความหัวข้อ */
+    color: #333;
     margin-bottom: 15px;
     font-size: 1.5rem;
 }
 
 .feature-box p {
-    color: #666; /* สีข้อความย่อย */
+    color: #666;
 }
 
 /* Testimonials Section */
 .testimonials {
     padding: 50px 0;
-    background-color: #ffb6c1;
+    background-color: #fce0e5;
     border-radius: 25px;
-    margin-bottom: 50px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.testimonials .testimonial-item {
-    background-color: white;
-    border-radius: 15px;
-    padding: 30px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-right: 30px;
-    transition: transform 0.3s;
-}
-
-.testimonials .testimonial-item:hover {
-    transform: translateY(-10px);
-}
-
-.testimonials .testimonial-item p {
-    font-style: italic;
-    color: #666;
-}
-
-.testimonials .testimonial-item .client-name {
+.testimonials-title {
     color: #d16c91;
+    font-size: 2rem;
+    margin-bottom: 20px;
     font-weight: bold;
 }
 
-.testimonials .testimonial-item img {
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    margin-right: 15px;
+.testimonial-item {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.testimonials .testimonial-item .client-info {
-    display: flex;
-    align-items: center;
+.testimonial-item p {
+    font-style: italic;
+    color: #000;
+}
+
+.testimonial-item footer {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #000;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* External Websites Section */
+#external-websites {
+    padding: 150px 0; 
+    background-color: #fce0e5; 
+    border-radius: 25px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงา */
+}
+
+#external-websites p {
+    color: #666; 
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#external-websites iframe {
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+}
+
+#external-websites iframe:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 /* Gallery Section */
@@ -175,57 +206,55 @@ button.cta-btn:hover {
     transform: scale(1.05);
 }
 
-/* External Websites Section */
-#external-websites {
-    padding: 150px 0; /* ระยะห่างด้านบนและล่าง */
-    background-color: #fce0e5; /* สีพื้นหลัง */
-    border-radius: 25px; /* มุมโค้งมน */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* เงา */
-}
-
-#external-websites h2 {
-    color: #d16c91; /* สีหัวข้อ */
-    font-size: 2rem; /* ขนาดตัวอักษร */
-    margin-bottom: 20px; /* ระยะห่างจากข้อความด้านล่าง */
-}
-
-#external-websites p {
-    color: #666; /* สีข้อความคำบรรยาย */
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-}
-
-#external-websites iframe {
-    border: 1px solid #ccc; /* ขอบของ iframe */
-    border-radius: 15px; /* มุมโค้งมน */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* เงารอบๆ iframe */
-    transition: transform 0.3s, box-shadow 0.3s; /* เพิ่มแอนิเมชันเมื่อโต้ตอบ */
-}
-
-#external-websites iframe:hover {
-    transform: scale(1.05); /* ขยายเมื่อเมาส์วาง */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* เงาเพิ่มขึ้นเมื่อโต้ตอบ */
-}
-
-
 /* Social Links Section */
 .social-links {
+    background-color: #fce0e5;
     text-align: center;
     margin-top: 50px;
-    background-color: #d16c91;
     padding: 30px 0;
     border-radius: 25px;
 }
 
 .social-links a {
-    font-size: 25px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    text-align: center;
+    font-size: 16px;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
     color: white;
-    margin: 0 15px;
-    transition: color 0.3s;
 }
 
-.social-links a:hover {
-    color: #e19ba8;
+/* Facebook Button */
+.social-links a[href*="facebook.com"] {
+    background-color: #3b5998;
+}
+
+.social-links a[href*="facebook.com"]:hover {
+    background-color: #2d4373;
+    transform: scale(1.05);
+}
+
+/* TikTok Button */
+.social-links a[href*="tiktok.com"] {
+    background-color: #000000;
+}
+
+.social-links a[href*="tiktok.com"]:hover {
+    background-color: #69C9D0;
+    transform: scale(1.05);
+}
+
+/* Instagram Button */
+.social-links a[href*="instagram.com"] {
+    background-color: #E1306C;
+}
+
+.social-links a[href*="instagram.com"]:hover {
+    background-color: #C13584;
+    transform: scale(1.05);
 }
 
 /* Footer */
@@ -241,41 +270,73 @@ footer p {
     margin: 0;
 }
 
-/* Team Section */
-.team {
+section.py-5 {
+    background-color: #fce0e5; 
+    background-image: url('path/to/your/background-image.jpg'); 
+    background-size: cover; 
+    background-position: center; 
     padding: 50px 0;
-    background-color: #f9d5e5;
+
     border-radius: 25px;
+    margin-top: 50px;
 }
 
-.team .team-member {
+/* Team Member Section */
+.card {
+    background-color: #fce0e5; 
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-top: 50px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-img-top {
+    border-radius: 10px;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Card Body */
+.card-body {
+    padding: 20px;
     text-align: center;
-    margin-bottom: 30px;
+
 }
 
-.team .team-member img {
-    width: 50px; /* กำหนดความกว้าง */
-    height: 50px; /* กำหนดความสูงเท่าเดิม */
-    object-fit: cover; /* ตัดส่วนเกินออกและปรับให้อยู่ในกรอบ */
-    border-radius: 50%; /* ยังคงรูปวงกลมเดิม */
-    display: block; /* เพื่อให้รูปจัดอยู่ในกรอบของ container */
-    margin: 0 auto; /* จัดให้อยู่ตรงกลาง */}
-
-.team .team-member h3 {
-    color: #d16c91;
+.card-title {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
 }
 
-.team .team-member p {
-    color: #666;
+.card p {
+    font-size: 1rem;
+    color: #777;
+    margin-bottom: 15px;
 }
 
-.team .team-member a {
-    color: #d16c91;
+/* GitHub Button */
+.btn-github {
+    background-color: #ff007f;
+    color: white;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 25px;
     text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
-.team .team-member a:hover {
-    text-decoration: underline;
+.btn-github:hover {
+    background-color: #ff69b4;
+    transform: translateY(-3px);
 }
 
 /* Contact Form */
@@ -285,7 +346,8 @@ footer p {
     border-radius: 25px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-form input,
+.contact-form textarea {
     border-radius: 15px;
     padding: 10px;
     border: 1px solid #d16c91;
@@ -321,42 +383,18 @@ footer p {
     .team .team-member {
         margin-bottom: 20px;
     }
-}
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff7c7c;
-    color: white;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
 
-/* เมื่อ hover */
-.btn:hover {
-    background-color: #ff4d4d; /* เปลี่ยนสีเมื่อ hover */
-    transform: scale(1.05);   /* เพิ่มขนาดเล็กน้อย */
-}
 
-/* เอฟเฟกต์ focus (เมื่อใช้ Tab บนคีย์บอร์ด) */
-.btn:focus {
-    outline: 2px solid #ff4d4d;
-    outline-offset: 3px;
-}
-section {
-    border: 2px solid #FFC0CB; /* กรอบสีชมพูอ่อน */
-    padding: 20px; /* ระยะห่างภายใน */
-    border-radius: 8px; /* มุมโค้งมน */
-    margin-top: 50px; /* ระยะห่างจาก navbar */
-}
+    h1 {
+        font-size: 2rem;
+    }
 
-section h1 {
-    color: #FF1493; /* เปลี่ยนสีหัวเรื่องเป็นชมพูเข้ม */
-}
+    h2 {
+        font-size: 1.8rem;
+    }
 
-section p {
-    color: #333; /* สีข้อความ */
+    .card {
+        margin-bottom: 20px;
+ 
+    }
 }
