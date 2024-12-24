@@ -1,0 +1,134 @@
+/* education */
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    background-color: #ffcc00; /* สีพื้นหลัง */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0000;
+}
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffaa22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-home:hover {
+    background-color: #cc8400;
+    transition: 0.3s;
+}
+  #edu-box {
+    width: 50%;
+    margin: 40px auto;
+    background-color: #fff3e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .edu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    gap: 120px;
+  }
+  .education {
+    width: 40%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .education:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .education-img {
+    width: 50%;
+    height: auto;
+    border-radius: 8px;
+  }  
+  .education p {
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+  }
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #activities {
+    width: 80%;
+    margin: 40px auto;
+    background-color: #fff3e6;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #ff6f61;
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  
+  .activity-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 80px;
+  }
+  
+  .activity {
+    width: 30%;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .activity-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .activity p {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+  }

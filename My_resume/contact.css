@@ -1,0 +1,180 @@
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 2px solid #ddd;
+    background-color: #ffcc00; /* สีพื้นหลัง */
+}
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    color: #8b0000;
+}
+.btn-home {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ffaa22;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.btn-home:hover {
+    background-color: #cc8400;
+    transition: 0.3s;
+}
+.Contact-text {
+    text-align: center;
+    margin-top: 50px;
+    color: #333;
+}
+
+.tell-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .tell {
+    width: 20%;
+    margin: 15px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .tell:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  .tell p {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .address {
+    width: 20%;
+    margin: 5px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .address:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  .address p {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+  }
+
+  .mail-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .mail {
+    width: 20%;
+    margin: 5px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .mail:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .linkedin-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .linkedin {
+    width: 20%;
+    margin: 5px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .linkedin:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .discord-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .discord {
+    width: 20%;
+    margin: 5px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .discord:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+
+  .facebook-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 120px;
+  }
+  .facebook {
+    width: 20%;
+    margin: 5px auto;
+    background-color: #FFCC99;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .facebook:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }

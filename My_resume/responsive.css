@@ -1,0 +1,12 @@
+@media (max-width: 768px) {
+    body {
+        font-size: 14px; /* ลดขนาดฟอนต์ */
+        padding: 10px;
+    }
+    .navbar {
+        flex-direction: column; /* ให้เมนูเรียงลง */
+    }
+    .section {
+        padding: 20px;
+    }
+}
