@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-    max-width: 120px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 15px;
 }
@@ -53,10 +53,10 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Header */
 header {
-    background-color: #fce0e5; 
-    background-image: url('path/to/your/background-image.jpg'); 
-    background-size: cover; 
-    background-position: center; 
+    background-color: #fce0e5;
+    background-image: url('path/to/your/background-image.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 50px 0;
     text-align: center;
 
@@ -75,6 +75,7 @@ header p {
     color: #d16c91;
 }
 
+/* Button Styles */
 .btn.btn-primary {
     background-color: #ff007f;
     color: white;
@@ -147,6 +148,11 @@ header p {
     transition: transform 0.3s ease;
 }
 
+.testimonial-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
 .testimonial-item p {
     font-style: italic;
     color: #000;
@@ -156,11 +162,6 @@ header p {
     font-size: 1rem;
     font-weight: bold;
     color: #000;
-}
-
-.testimonial-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* External Websites Section */
@@ -188,22 +189,6 @@ header p {
 #external-websites iframe:hover {
     transform: scale(1.05); 
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
-}
-
-/* Gallery Section */
-.gallery {
-    padding: 50px 0;
-    background-color: #fce0e5;
-    border-radius: 25px;
-}
-
-.gallery .carousel-item img {
-    border-radius: 15px;
-    transition: transform 0.3s;
-}
-
-.gallery .carousel-item img:hover {
-    transform: scale(1.05);
 }
 
 /* Social Links Section */
@@ -255,30 +240,6 @@ header p {
 .social-links a[href*="instagram.com"]:hover {
     background-color: #C13584;
     transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    background-color: #ffb6c1;
-    color: #333;
-    padding: 30px 0;
-    text-align: center;
-    border-radius: 25px;
-}
-
-footer p {
-    margin: 0;
-}
-
-section.py-5 {
-    background-color: #fce0e5; 
-    background-image: url('path/to/your/background-image.jpg'); 
-    background-size: cover; 
-    background-position: center; 
-    padding: 50px 0;
-
-    border-radius: 25px;
-    margin-top: 50px;
 }
 
 /* Team Member Section */
@@ -339,51 +300,8 @@ section.py-5 {
     transform: translateY(-3px);
 }
 
-/* Contact Form */
-.contact-form {
-    padding: 50px 0;
-    background-color: #ffb6c1;
-    border-radius: 25px;
-}
-
-.contact-form input,
-.contact-form textarea {
-    border-radius: 15px;
-    padding: 10px;
-    border: 1px solid #d16c91;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.contact-form button {
-    background-color: #d16c91;
-    color: rgb(0, 0, 0);
-    border: none;
-    padding: 12px 25px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-    background-color: #fce0e5;
-}
-
 /* Responsive Layout */
 @media (max-width: 768px) {
-    .features .feature-item {
-        margin-bottom: 20px;
-    }
-
-    .testimonials .testimonial-item {
-        margin-right: 0;
-    }
-
-    .team .team-member {
-        margin-bottom: 20px;
-    }
-
 
     h1 {
         font-size: 2rem;
@@ -395,24 +313,24 @@ section.py-5 {
 
     .card {
         margin-bottom: 20px;
- 
+
     }
 }
-/* สำหรับหน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
+
 @media (max-width: 576px) {
     header img {
         width: 100px;
     }
 }
 
-/* สำหรับแท็บเล็ต */
+
 @media (min-width: 577px) and (max-width: 768px) {
     .navbar-nav {
         text-align: center;
     }
 }
 
-/* สำหรับหน้าจอขนาดใหญ่ (โน๊ตบุ๊คและคอมพิวเตอร์) */
+
 @media (min-width: 769px) {
     .container {
         max-width: 1200px;
