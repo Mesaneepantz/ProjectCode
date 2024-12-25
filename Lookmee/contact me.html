@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+    <div class="header">
+        <h1>Contact</h1>
+    </div>
+
+    <nav class="topnav">
+        <div class="hamburger" onclick="toggleNavbar()">&#9776;</div>
+        <div class="nav-links" id="navbar">
+            <a href="https://www.facebook.com/bbear.ing.1">Facebook</a>
+            <a href="https://www.instagram.com/bear.ing_art/">Instagram</a>
+            <a href="https://www.youtube.com/@bbearing">YouTube</a>
+            <a href="week3.html" class="back-button">Back</a>
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="container">
+        <div class="card">
+            <h2>ติดต่อฉัน</h2>
+            <div class="rightcolumn">
+                <ol>
+                    <li>Tel: 096-xxxx198</li>
+                    <li>Email: circhyathana123@gmail.com</li>
+                </ol>
+            </div>
+
+            <div class="row">
+                <div class="leftcolumn">
+                    <form action="mailto:(gmailของคุณ)" method="post" enctype="text/plain" class="form-table">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name_surname" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-mail:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">ข้อความที่ต้องการส่ง:</label>
+                            <textarea id="message" name="message" rows="8" placeholder="Your Message" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="ส่งข้อความ">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="footer">
+    <h5>Sridana 95 Moo 4, Chaengwattana Road Soi Chaengwattana-Pak Kret 19, Pak Kret Subdistrict, Pak Kret District, Nonthaburi Province 11120</h5>
+    <a href="https://6012261.wixsite.com/my-site-3" class="footer-button">PORTFOLIO</a>
+</div>
+
+<script>
+    function toggleNavbar() {
+        var navbar = document.getElementById("navbar");
+        navbar.classList.toggle("active");
+    }
+</script>
+</body>
+</html>

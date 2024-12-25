@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  padding: 10px;
+  background: #F5EFFF;
+  margin: 0;
+}
+
+/* Header */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+/* Header Title */
+.header h1 {
+  font-size: 50px;
+}
+
+/* Top Navigation Bar */
+.topnav {
+  display: flex;
+  justify-content: space-between; /* Changed to space between */
+  align-items: center; /* Center items vertically */
+  background-color: #A594F9;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.topnav .hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Hide by default */
+}
+
+.nav-links {
+  display: flex;
+  justify-content: space-around; /* Spread links evenly */
+  width: 100%;
+}
+
+.topnav a {
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+/* Hover effect for links */
+.topnav a:hover {
+  background-color: #FADFA1;
+  color: #000000;
+}
+
+/* Two columns layout */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.leftcolumn {
+  flex: 70%;
+  padding: 20px;
+}
+
+.rightcolumn {
+  flex: 30%;
+  background-color: #F5EFFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+/* Cards for content with rounded corners */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #A594F9;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 800px) {
+  .topnav {
+    flex-direction: column; /* Align links vertically */
+    align-items: center;
+  }
+
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex; /* Show links when active */
+  }
+
+  .topnav .hamburger {
+    display: block; /* Show hamburger icon */
+  }
+
+  .leftcolumn, .rightcolumn {
+    flex: 100%; /* Full width on small screens */
+  }
+}
