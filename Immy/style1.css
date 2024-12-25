@@ -1,0 +1,68 @@
+div {
+    color: #ffffff;
+}
+body {
+    font-family: 'Kanit', sans-serif;
+    background-image: url('../Megalife-pic/bg.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+nav {
+    background-color: 608BC1;
+    padding: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: flex;
+    margin: auto;
+}
+
+nav ul li a {
+    color: #ffffff;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: black;
+}
+
+/* Hamburger Menu */
+.topnav a {
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    display: block;
+  }
+  
+  /* Style the hamburger menu */
+  .topnav a.icon {
+    background: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  /* .Info-main{
+    display: flex;
+    padding: 2px;
+    justify-content: center;
+    margin: 0;
+  } */
+  
