@@ -48,9 +48,15 @@
                 <button type="submit" class="btn btn-primary">Send Message</button>
             </form>
         </div>
+        <div id="popup" class="hidden">
+            <div class="popup-content">
+              <p id="popup-message"></p>
+              <button id="popup-close">Close</button>
+            </div>
+          </div>
     </section>
 
-    <script src="contact.js"></script>
+    <script src="index.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 <script>
     emailjs.init("vWp_0BdHPuzuc_67Y"); 

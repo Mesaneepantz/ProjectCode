@@ -386,6 +386,26 @@ footer p {
     margin: 0;
 }
 
+.hidden {
+    display: none;
+  }
+  
+  #popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+    color: white;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    text-align: center;
+  }
+  
 /* Responsive Layout */
 @media (max-width: 768px) {
 

@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Handle form submission
-    form.addEventListener("submit", (e) => {
+    form.addEventListener("submit", async (e) => {
         e.preventDefault(); // Prevent page refresh
 
         const errorMessage = validateForm();
@@ -46,56 +46,49 @@ document.addEventListener("DOMContentLoaded", () => {
             return;
         }
 
-        showPopup("ได้รับข้อมูลแล้ว โปรดรอการติดต่อกลับทางอีเมล");
-        form.reset(); // Clear the form inputs
+        // ดึงค่าจากฟอร์ม
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+
+        // กำหนดค่าต่าง ๆ สำหรับการส่งอีเมล
+        const serviceID = "service_b92zg9v"; 
+        const templateID = "template_rpv35nw";
+
+        const templateParams = {
+            from_name: name,
+            from_email: email,
+            message: message,
+        };
+
+        try {
+            // ตรวจสอบว่า publicKey ถูกตั้งค่าใน EmailJS หรือไม่
+            if (typeof emailjs === "undefined") {
+                console.error("EmailJS ไม่ได้ถูกติดตั้งหรือโหลดสำเร็จ");
+                alert("ไม่สามารถเชื่อมต่อกับระบบส่งอีเมลได้");
+                return;
+            }
+
+            // ใช้ EmailJS ส่งอีเมล
+            await emailjs.send(serviceID, templateID, templateParams);
+
+            // ข้อความแจ้งว่าข้อความถูกส่งแล้ว
+            showPopup("ข้อความถูกส่งแล้ว! เราจะติดต่อกลับในไม่ช้า");
+            form.reset(); // ล้างข้อมูลฟอร์ม
+
+        } catch (error) {
+            console.error("Error sending email:", error);
+            showPopup("เกิดข้อผิดพลาดในการส่งข้อความ โปรดลองใหม่อีกครั้ง");
+        }
     });
 
     // Close the popup when the close button is clicked
     popupClose.addEventListener("click", () => {
         popup.classList.add("hidden");
     });
-    
 });
-document.querySelector("form").addEventListener("submit", async (event) => {
-    event.preventDefault(); // ป้องกันการ reload หน้า
-
-    // ดึงค่าจากฟอร์ม
-    const name = document.getElementById("name").value.trim();
-    const email = document.getElementById("email").value.trim();
-    const message = document.getElementById("message").value.trim();
-
-    // ตรวจสอบข้อมูลที่กรอก
-    if (!name || !email || !message) {
-        alert("โปรดกรอกข้อมูลให้ครบถ้วน");
-        return;
-    }
-
-    // กำหนดค่าต่าง ๆ สำหรับการส่งอีเมล
-    const serviceID = "service_b92zg9v"; 
-    const templateID = "template_rpv35nw";
-
-    const templateParams = {
-        from_name: name,
-        from_email: email,
-        message: message,
-    };
-
-    try {
-        // ตรวจสอบว่า publicKey ถูกตั้งค่าใน EmailJS หรือไม่
-        if (!emailjs) {
-            console.error("EmailJS ไม่ได้ถูกติดตั้งหรือโหลดสำเร็จ");
-            alert("ไม่สามารถเชื่อมต่อกับระบบส่งอีเมลได้");
-            return;
-        }
-
-        // ใช้ EmailJS ส่งอีเมล
-        await emailjs.send(serviceID, templateID, templateParams);
-
-        alert("ส่งข้อความสำเร็จ! เราจะติดต่อกลับในไม่ช้า");
-        document.querySelector("form").reset(); // ล้างข้อมูลฟอร์ม
-
-    } catch (error) {
-        console.error("Error sending email:", error);
-        alert("เกิดข้อผิดพลาดในการส่งข้อความ โปรดลองใหม่อีกครั้ง");
-    }
-});
+const showPopup = (message) => {
+    console.log("Popup showing with message: ", message); // ตรวจสอบว่าเรียกฟังก์ชันนี้
+    popupMessage.textContent = message;
+    popup.classList.remove("hidden");
+};
