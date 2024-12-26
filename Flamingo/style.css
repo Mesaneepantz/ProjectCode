@@ -73,6 +73,13 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ff69b4; 
 }
 
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
 /* Header */
 header {
     background-color: #fce0e5;
@@ -406,6 +413,7 @@ footer p {
     text-align: center;
   }
   
+  
 /* Responsive Layout */
 @media (max-width: 768px) {
 
@@ -430,13 +438,7 @@ footer p {
 }
 
 
-.hamburger {
-    display: none;
-    font-size: 24px;
-    cursor: pointer;
-    background: none;
-    border: none;
-}
+
 @media (max-width: 768px) {
     .hamburger {
         display: block;
