@@ -1,20 +1,27 @@
-# Ignore node_modules directory
+# Node.js dependencies
 node_modules/
 
-# Ignore .env file (เก็บข้อมูลที่เป็นความลับ)
+# Environment files
 .env
 
-# Ignore log files
-*.log
-
-# Ignore OS generated files
+# OS-generated files
 .DS_Store
 Thumbs.db
 
-# Ignore temporary or cache files
-*.tmp
-*.cache
+# IDE configuration files
+.vscode/
+.idea/
 
-# Ignore specific resume files
-My\ resume(Web)/My\ RESUME.docx
-My\ resume(Web)/My\ RESUME.pdf
+# Build output
+dist/
+build/
+public/
+
+# Test result files
+coverage/
+test-results/
+
+# Log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
