@@ -14,3 +14,30 @@ Thumbs.db
 # Ignore resume files (ถ้าคุณไม่ต้องการให้ไฟล์เหล่านี้ถูกติดตาม)
 My\ resume(Web)/My\ RESUME.docx
 My\ resume(Web)/My\ RESUME.pdf
+# Node.js dependencies
+node_modules/
+
+# Environment files
+.env
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# IDE configuration files
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+public/
+
+# Test result files
+coverage/
+test-results/
+
+# Log files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
