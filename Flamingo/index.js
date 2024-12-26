@@ -92,3 +92,7 @@ const showPopup = (message) => {
     popupMessage.textContent = message;
     popup.classList.remove("hidden");
 };
+function toggleMenu() {
+    const navbarNav = document.getElementById('navbarNav');
+    navbarNav.classList.toggle('show');
+}
