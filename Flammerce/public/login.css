@@ -1,0 +1,241 @@
+/* Body */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #fce0e5; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Login Container */
+.login-container {
+    background: linear-gradient(135deg, #ffaad4, #ff77a9); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Form Heading */
+.login-form h2, .register-container h2 {
+    color: #ff007f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Form Group */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    color: #ff007f;
+    font-weight: 600;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ff007f;
+    font-size: 1rem;
+    margin-top: 5px;
+    background-color: #fff;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.form-group input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+.form-group input:focus {
+    border-color: #ff6fa5;
+    box-shadow: 0 0 8px rgba(255, 111, 165, 0.5);
+    outline: none;
+}
+
+/* Forgot Password */
+.forgot-password {
+    margin-top: 10px;
+    text-align: left; 
+}
+
+.forgot-password a {
+    color: #ff007f;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    color: #ff6fa5;
+    text-decoration: underline;
+}
+
+/* Button */
+button.btn {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+button.btn:hover {
+    background-color: #d16c91;
+    transform: scale(1.05); 
+}
+
+/* Footer */
+.login-footer {
+    margin-top: 30px;
+    color: #333;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    color: #ff007f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.login-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Reset Password Container */
+.reset-password-container {
+    background: linear-gradient(135deg, #ffaad4, #ff77a9); 
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Reset Password Heading */
+.reset-password-container h2 {
+    color: #ff007f;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Reset Password Form Group */
+.reset-password-form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.reset-password-form .form-group label {
+    color: #ff007f;
+    font-weight: 600;
+}
+
+.reset-password-form .form-group input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ff007f;
+    font-size: 1rem;
+    margin-top: 5px;
+    background-color: #fff;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.reset-password-form .form-group input:focus {
+    border-color: #ff6fa5;
+    box-shadow: 0 0 8px rgba(255, 111, 165, 0.5);
+    outline: none;
+}
+
+/* Button (Reset Password) */
+.reset-password-container button.btn {
+    background-color: #ff007f;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.reset-password-container button.btn:hover {
+    background-color: #d16c91;
+    transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    .login-container, .reset-password-container {
+        width: 100%;
+        padding: 30px;
+    }
+
+    .login-form h2, .reset-password-container h2 {
+        font-size: 2rem;
+    }
+
+    .form-group input,
+    .reset-password-form .form-group input,
+    button.btn {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .forgot-password {
+        text-align: center;
+    }
+
+    .forgot-password a {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-container, .reset-password-container {
+        padding: 25px;
+    }
+
+    .login-form h2, .reset-password-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .form-group input,
+    .reset-password-form .form-group input,
+    button.btn {
+        padding: 8px;
+    }
+
+    button.btn {
+        font-size: 1rem;
+    }
+
+    .login-footer {
+        font-size: 0.8rem;
+    }
+}
