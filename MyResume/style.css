@@ -1,10 +1,10 @@
 /* กำหนดสีหลัก */
 :root {
-    --color-dark: #423736;  /* สีน้ำตาลเข้ม */
-    --color-primary: #987185; /* สีม่วงพาสเทล */
-    --color-secondary: #D6AA9F; /* สีชมพูอ่อน */
-    --color-light: #E9D5B7; /* สีครีม */
-    --color-background: #F4E2D1; /* สีพื้นหลัง */
+    --color-dark: #423736;
+    --color-primary: #987185;
+    --color-secondary: #D6AA9F;
+    --color-light: #E9D5B7;
+    --color-background: #F4E2D1;
 }
 
 /* General styles */
@@ -29,6 +29,11 @@ body {
 .navbar-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    display: flex;
     align-items: center;
 }
 
@@ -178,6 +183,7 @@ body {
     text-align: center;
     padding: 20px;
 }
+
 /* Responsive Design */
 
 /* สำหรับหน้าจอขนาดใหญ่ เช่น เดสก์ท็อป */
@@ -189,16 +195,6 @@ body {
     .hamburger {
         display: none;
     }
-
-    .section-title {
-        font-size: 1.5rem;
-    }
-
-    .education-item,
-    .activity-item,
-    .certificate-item {
-        width: 300px;
-    }
 }
 
 /* สำหรับหน้าจอขนาดกลาง เช่น แท็บเล็ต */
@@ -208,14 +204,18 @@ body {
         justify-content: center;
     }
 
-    .header-title {
-        font-size: 1.8rem;
+    .navbar-list {
+        flex-direction: column;
+        gap: 10px;
+        display: none; /* ซ่อนเมนูเริ่มต้น */
     }
 
-    .education-item,
-    .activity-item,
-    .certificate-item {
-        width: 45%;
+    .navbar-list.show {
+        display: flex; /* แสดงเมนูเมื่อคลิก */
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
@@ -224,16 +224,6 @@ body {
     .navbar-content {
         flex-direction: column;
         align-items: center;
-        
-    }
-
-    .navbar-list {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hamburger {
-        display: block;
     }
 
     .section-title {
