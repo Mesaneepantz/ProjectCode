@@ -1,11 +1,10 @@
 /* กำหนดสีหลัก */
 :root {
-    --color-1: #ffbb94;  /* สีพาสเทลชมพู */
-    --color-2: #fb9590;  /* สีชมพูอ่อน */
-    --color-3: #dc586d;  /* สีแดงอมชมพู */
-    --color-4: #a33757;  /* สีแดงเข้ม */
-    --color-5: #852e4e;  /* สีม่วงอมแดง */
-    --color-6: #4c1d3d;  /* สีแดงเข้มมืด */
+    --color-dark: #423736;  /* สีน้ำตาลเข้ม */
+    --color-primary: #987185; /* สีม่วงพาสเทล */
+    --color-secondary: #D6AA9F; /* สีชมพูอ่อน */
+    --color-light: #E9D5B7; /* สีครีม */
+    --color-background: #F4E2D1; /* สีพื้นหลัง */
 }
 
 /* General styles */
@@ -14,187 +13,175 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #fb9590; 
-    color: #333;
+    background-color: var(--color-background);
+    color: var(--color-dark);
 }
 
 /* Navbar */
-.navbar {
-    background-color: var(--color-5); 
+.navbar-container {
+    background-color: var(--color-dark);
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.nav-img {
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo-img {
     width: 60px;
     height: 60px;
     margin-right: 20px;
 }
 
-.nav-text {
-    font-size: 24px;
+.navbar-logo-text {
+    font-size: 20px;
     font-weight: bold;
-    color: #fff;
+    color: var(--color-light);
 }
 
-.nav-link {
-    color: var(--color-1); 
+.navbar-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.nav-link:hover {
-    color: var(--color-2); 
+.navbar-item {
+    margin: 0 10px;
+}
+
+.navbar-link {
+    color: var(--color-light);
+    text-decoration: none;
+}
+
+.navbar-link:hover {
+    color: var(--color-secondary);
 }
 
 /* Header */
-header {
-    background-color: var(--color-6); 
-    color: var(--color-1); 
+.header-container {
+    background-color: var(--color-background);
+    color: var(--color-dark);
     text-align: center;
     padding: 50px 20px;
 }
 
-header img {
-    border: 5px solid var(--color-3); 
+.header-profile-img {
+    border: 10px solid var(--color-secondary);
     border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
 }
 
-header h1 {
-    color: var(--color-4); 
+.header-title {
+    font-size: 2rem;
+    margin: 15px 0;
+    color: var(--color-dark);
 }
 
-header em {
-    font-style: italic;
-    color: var(--color-4);
+.header-btn {
+    color: var(--color-dark);
+    border: 2px solid var(--color-dark);
+    text-decoration: none;
+    padding: 5px 10px;
+    display: inline-block;
 }
 
-header .btn-outline-dark {
-    color: var(--color-3);
-    border: 2px solid var(--color-6);
-}
-
-header .btn-outline-dark:hover {
-    background-color: var(--color-6);
-    color: #fff;
+.header-btn:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
 }
 
 /* Sections */
-section {
-    padding: 30px;
+.section-about,
+.section-education,
+.section-employment,
+.section-skills,
+.section-contact {
+    padding: 40px 20px;
     margin-bottom: 30px;
-    background-color: #fb9590;
+    margin-top: 40px;
+    background-color: var(--color-light);
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-section h2 {
-    color: var(--color-4); 
-}
-
-section p, section ul {
-    color: #555;
-}
-
-/* Education and Activities */
-.edu-list, .activity-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around;
-}
-
-.education, .activity {
-    background-color: #ffbb94;
-    border-radius: 8px;
-    padding: 15px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education:hover, .activity:hover {
-    transform: scale(0.95);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-}
-
-.education-img, .activity-img {
-    width: 180px;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 10px;
+.section-title {
+    color: var(--color-dark);
     margin-bottom: 20px;
+    border-bottom: 2px solid var(--color-secondary);
+    display: inline-block;
+    padding-bottom: 5px;
 }
 
-.activity p, .education p {
-    color: var(--color-4);
-}
-
-/* Skills And Certificate */
+.education-list,
+.activity-list,
 .certificate-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 2px;
     justify-content: space-around;
 }
 
-.certificate {
-    background-color: #ffbb94;
+.education-item,
+.activity-item,
+.certificate-item {
+    background-color: var(--color-primary);
+    color: var(--color-light);
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    width: 280px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 30px;
 }
 
-.certificate:hover {
-    transform: scale(0.95);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+.education-item:hover,
+.activity-item:hover,
+.certificate-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    margin-bottom: 4px;
 }
 
+.education-img,
+.activity-img,
 .certificate-img {
-    width: 180px;
-    height: 180px;
+    width: 100%;
+    height: 170px;
     object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.certificate p {
-    color: var(--color-4);
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 /* Footer */
-footer {
-    background-color: var(--color-6); 
-    color: #fff;
+.footer-container {
+    background-color: var(--color-dark);
+    color: var(--color-light);
     text-align: center;
     padding: 20px;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    header img {
-        width: 100px;
+    .education-list,
+    .activity-list,
+    .certificate-list {
+        flex-direction: column;
+        align-items: center;
     }
-    .navbar-nav {
-        text-align: center;
-    }
-}
 
-/* สำหรับหน้าจอขนาดเล็ก (โทรศัพท์มือถือ) */
-@media (max-width: 576px) {
-    header img {
-        width: 100px;
-    }
-}
-
-/* สำหรับแท็บเล็ต */
-@media (min-width: 577px) and (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
-}
-
-/* สำหรับหน้าจอขนาดใหญ่ (โน๊ตบุ๊คและคอมพิวเตอร์) */
-@media (min-width: 769px) {
-    .container {
-        max-width: 1200px;
+    .header-profile-img {
+        width: 120px;
+        height: 120px;
     }
 }

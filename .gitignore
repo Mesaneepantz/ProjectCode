@@ -145,7 +145,7 @@ Thumbs.db
 # Build output
 dist/
 build/
-public/
+
 
 # Test result files
 coverage/

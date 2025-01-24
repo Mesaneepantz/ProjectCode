@@ -7,7 +7,7 @@ const session = require('express-session');
 const flash = require('connect-flash');
 const path = require('path');
 const cors = require('cors');
-const emailjs = require('emailjs-com'); // ใช้ EmailJS
+const emailjs = require('emailjs-com');
 const crypto = require('crypto');
 
 // Initialize express app
@@ -32,10 +32,10 @@ app.use(cors());
 
 // Database connection
 const db = mysql.createConnection({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
+  host: '127.0.0.1',
+  user: 'root',
+  database: 'user_registration',
+  connectTimeout: 10000,
 });
 
 db.connect((err) => {
@@ -69,7 +69,6 @@ app.post('/register', async (req, res) => {
   }
 
   try {
-    // Check if email exists
     const checkEmailQuery = 'SELECT * FROM users WHERE email = ?';
     db.query(checkEmailQuery, [email], async (err, results) => {
       if (err) {
@@ -83,10 +82,9 @@ app.post('/register', async (req, res) => {
         return res.redirect('/register');
       }
 
-      // Hash password
+      
       const hashedPassword = await bcrypt.hash(password, 10);
-
-      // Insert into DB
+      
       const insertQuery = 'INSERT INTO users (username, email, password) VALUES (?, ?, ?)';
       db.query(insertQuery, [username, email, hashedPassword], (err, result) => {
         if (err) {
@@ -112,8 +110,8 @@ app.post('/register', async (req, res) => {
 // Login route
 app.post('/login', (req, res) => {
   const { email, password } = req.body;
-
   const query = 'SELECT * FROM users WHERE email = ?';
+
   db.query(query, [email], async (err, results) => {
     if (err || results.length === 0) {
       req.flash('message', 'Invalid email or password!');
@@ -125,14 +123,22 @@ app.post('/login', (req, res) => {
 
     if (isMatch) {
       req.session.userId = user.id;
-      res.redirect('/secrets');
+      res.status(200).json({
+        success: true,
+        message: 'Login successful!',
+        redirect: '/',
+      });
     } else {
       req.flash('message', 'Invalid email or password!');
-      res.redirect('/login');
+      res.status(401).json({
+        success: false,
+        error: 'Invalid email or password!',
+      });
     }
   });
 });
 
+// Secrets route
 app.get('/secrets', (req, res) => {
   if (!req.session.userId) {
     return res.redirect('/login');
@@ -140,6 +146,7 @@ app.get('/secrets', (req, res) => {
   res.render('secrets');
 });
 
+// Logout route
 app.get('/logout', (req, res) => {
   req.session.destroy(() => {
     res.redirect('/');
@@ -150,7 +157,6 @@ app.get('/logout', (req, res) => {
 app.post('/reset-password', (req, res) => {
   const { email } = req.body;
 
-  // Step 1: Verify email exists
   const checkEmailQuery = 'SELECT * FROM users WHERE email = ?';
   db.query(checkEmailQuery, [email], (err, results) => {
     if (err) {
@@ -164,10 +170,10 @@ app.post('/reset-password', (req, res) => {
       return res.redirect('/reset-password');
     }
 
-    // Step 2: Generate reset token
     const resetToken = crypto.randomBytes(32).toString('hex');
     const resetTokenExpiry = new Date();
     resetTokenExpiry.setHours(resetTokenExpiry.getHours() + 1);
+
     const updateQuery = 'UPDATE users SET reset_token = ?, reset_token_expiry = ? WHERE email = ?';
     db.query(updateQuery, [resetToken, resetTokenExpiry, email], (err, result) => {
       if (err) {
@@ -176,7 +182,6 @@ app.post('/reset-password', (req, res) => {
         return res.redirect('/reset-password');
       }
 
-      // Step 3: Send reset link
       sendResetLink(email, resetToken);
       res.status(200).json({
         success: true,
@@ -186,18 +191,17 @@ app.post('/reset-password', (req, res) => {
   });
 });
 
-// Send reset link via email using EmailJS
+// Send reset link via EmailJS
 function sendResetLink(email, resetToken) {
   const resetLink = `https://yourdomain.com/reset-password/${resetToken}`;
-
   const templateParams = {
     to_email: email,
     subject: 'Reset Password',
     text: `We received a request to reset your password. Please click the link below to reset your password:\n\n${resetLink}\n\nIf you didn't request this, please ignore this email.`,
   };
 
-  // Send email via EmailJS
-  emailjs.send(process.env.EMAIL_SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, templateParams, process.env.EMAIL_USER)
+  emailjs
+    .send(process.env.EMAIL_SERVICE_ID, process.env.EMAIL_TEMPLATE_ID, templateParams, process.env.EMAIL_USER)
     .then((response) => {
       console.log('Password reset email sent:', response.text);
     })
@@ -207,6 +211,6 @@ function sendResetLink(email, resetToken) {
 }
 
 // Start the server
-app.listen(3000, () => {
-  console.log("Server is running on port 3000");
+app.listen(port, () => {
+  console.log(`Server is running on port ${port}`);
 });
